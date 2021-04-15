@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+<%for(var i=0;i < Maincontent.length;i++){%>
+<h1><%= Maincontent[i].title %></h1>
+<p><%= (Maincontent[i].post).substring(0,100)+" ..." %>
+<a href="/post/<%=Maincontent[i].title%>">Read More</a>
+<form method="POST" action="/take">
+    <button class="btn btn-primary" type="submit">Compose</button>
+</form>
+</p>
+<%}%>
+<%- include('partials/footer'); -%>
+
